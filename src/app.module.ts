@@ -5,6 +5,7 @@ import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
+    TypeOrmModule.forRoot(),
     HealthModule,
   ],
   controllers: [AppController],
