@@ -9,7 +9,7 @@ module.exports = {
     database: process.env.DB_NAME || process.env.RDS_DB_NAME || 'db',
    "logging": true,
    "entities": ["dist/**/*.entity{ .ts,.js}"],
-   "synchronize": true,
+   "synchronize": false,
    "migrations": ["dist/migrations/*{.ts,.js}"],
    "migrationsTableName": "migrations_typeorm",
    "migrationsRun": true,
