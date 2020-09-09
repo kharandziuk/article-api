@@ -1,1 +1,1 @@
-web: npm run typeorm migration:run && npm run build && npm run start:prod
+web: npm run build && npm run start:prod

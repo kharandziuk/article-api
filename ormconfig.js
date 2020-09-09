@@ -12,7 +12,7 @@ module.exports = {
    "synchronize": false,
    "migrations": ["dist/migrations/*{.ts,.js}"],
    "migrationsTableName": "migrations_typeorm",
-   "migrationsRun": true,
+   "migrationsRun": false,
     cli: {
       migrationsDir: 'src/migrations',
       entitiesDir: 'src/'
