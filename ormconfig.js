@@ -9,10 +9,10 @@ module.exports = {
     database: process.env.DB_NAME || process.env.RDS_DB_NAME || 'db',
    "logging": true,
    "entities": ["dist/**/*.entity{ .ts,.js}"],
-   "synchronize": false,
+   "synchronize": true,
    "migrations": ["dist/migrations/*{.ts,.js}"],
    "migrationsTableName": "migrations_typeorm",
-   "migrationsRun": false,
+   "migrationsRun": true,
     cli: {
       migrationsDir: 'src/migrations',
       entitiesDir: 'src/'
