@@ -2,7 +2,8 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return `Hello world! ${process.env.VARIABLE_TO_SHOW} !`
+  async getHello(): Promise<Article[]> {
+    await Article.insert({ title: 'cool', content: 'some content'})
+    return Article.find()
   }
 }
