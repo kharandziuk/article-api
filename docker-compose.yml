@@ -18,7 +18,9 @@ services:
       - 3000:3000
     environment:
       - PORT=3000
+      - DB_HOST=db
     env_file:
       - .env
     volumes:
       - ./:/code/
+    command: ./wait-for-it.sh db:5432 -- ./entrypoint.sh
