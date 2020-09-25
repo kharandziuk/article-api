@@ -1,13 +1,24 @@
 version: "3.7"
 
 services:
-  instamiligram_db:
-    image: postgres:11-alpine
+  #  web:
+  #    image: postgres:11-alpine
+  #    ports:
+  #      - 5432:5432
+  #    environment:
+  #      - POSTGRES_PASSWORD=$DB_PASSWORD
+  #      - POSTGRES_DB=$DB_NAME
+  #      - POSTGRES_USER=$DB_USER
+  #    env_file:
+  #      - .env
+
+  backend:
+    build: .
+    volumes:
+      - .:/code/
+      - node_modules:/code/node_modules
     ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_PASSWORD=$DB_PASSWORD
-      - POSTGRES_DB=$DB_NAME
-      - POSTGRES_USER=$DB_USER
-    env_file:
-      - .env
+      - 3000:3000
+
+volumes:
+    node_modules:
